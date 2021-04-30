@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <header>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    </header>
+    <body>
+        <svg width="500" height="500">
+            <rect x="10" y="10" width="30" height="30"/>
+            <rect x="60" y="10" rx="10" ry="10" width="30" height="30"/>
+            <polygon points="50, 160 55, 180 70, 180 60, 190 65, 205 50, 195 35, 205 40, 190 30, 180 45, 180"/>
+            <circle cx="25" cy="75" r="20"/>
+            <ellipse cx="75" cy="75" rx="20" ry="5"/>
+            <line x1="10" x2="50" y1="110" y2="150"/>
+            <polyline points="60, 110 65, 120 70, 115 75, 130 80, 125 85, 140 90, 135 95, 150 100, 145"/>
+            
+            
+        </svg>
+        <svg width="500" height="500">
+            <path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/>
+        </svg>
+        <svg width="100" height="100">
+            <path d="M 10 10 H 90 V 90 H 10 L 10 10"/>
+        </svg>
+        <svg width="100" height="100">
+            <path d="M 10 10 h 80 v 80 h -80 Z" fill="transparent" stroke="black"/>
+        </svg>
+        <svg width="500" height="500">
+            <path d="M 130 60 C 120 80, 180 80, 170 60" stroke="black" fill="transparent"/>
+        </svg>
+        <svg width="500" height="500">
+            <path d="M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" fill="transparent"/>
+        </svg>
+        <svg width="500" height="500">
+            <path d="M 10 80 Q 95 10 180 80" stroke="black" fill="transparent"/>
+        </svg>
+        <svg width="500" height="500">
+            <path d="M 10 80 Q 52.5 10, 95 80 T 180 80" stroke="black" fill="transparent"/>
+        </svg>
+        <svg width="500" height="500">
+            <path d="M 10 315 L 110 215 A 30 50 0 0 1 162.55 162.45 L 172.55 152.45 A 30 50 -45 0 1 215.1 109.9 L 315 10" stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/>
+        </svg>
+        <svg width="400" height="600">
+            <rect class="side" x="0"  y="0" width="50" height="50"/>
+            
+        </svg>
+        <svg id="canvas" width="500" height="500">
+            
+        </svg>
+        <svg width="500" height="500">
+            
+        </svg>
+        <svg width="500" height="500">
+            
+        </svg>
+    </body>
+
+    <script>
+        const test = d3.select("#canvas")
+
+        test.append("svg").attr("width", 50).attr("height", 50).append("circle").attr("cx", 25).attr("cy", 25).attr("r", 25).style("fill", "purple");
+    </script>
+</html>
