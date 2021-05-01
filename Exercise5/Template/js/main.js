@@ -87,14 +87,11 @@ var svg = d3.select("#chart-area").append("svg")
 .attr("width", width + margin.right + margin.left)
 .attr("height", height + margin.top + margin.bottom)
 
-var margin = {top: 10, right: 10, bottom: 100, left:100};
-var g = svg
-.append("g")
-.attr("transform", "translate(" + margin.left + ", " + margin.top + ")");
+var g = svg.append("g")
+.attr("transform", "translate(" + margin.left + ", " + margin.top + ")")
 
 
 d3.json("data/buildings.json").then(data => {
-	const maxHeight = Math.max.apply(Math, data.map(o => { return o.height; }))
 
 	data.forEach(d => {
 		d.height = +d.height
