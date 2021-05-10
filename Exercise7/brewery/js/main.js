@@ -1,4 +1,4 @@
-/*
+ /*
 *    main.js
 */
 
@@ -63,7 +63,8 @@ d3.json("data/revenues.json").then(data => {
     })
 
 	d3.interval(() => {
-		update(data)
+		var newData = flag ? data : data.slice(1)
+		update(newData)
 		flag = !flag
 	}, 2000)
 
@@ -89,7 +90,8 @@ const update = (data) => {
 	xAxisGroup.transition(300).call(xAxisCall)
     yAxisGroup.transition(300).call(yAxisCall)
 
-	var bars = g.selectAll("rect").data(data)
+	var bars = g.selectAll("rect")
+	.data(data, d => d.month)
 
 	bars.exit().attr("fill", "red")
 	.transition(300)
