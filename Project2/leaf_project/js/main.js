@@ -145,4 +145,7 @@ const update = (data, year) => {
 	.attr("cy", d => y(d.life_exp))
 	.attr("r", d =>  Math.sqrt(area(d.population) / Math.PI))
 	.attr("fill", d => color(d.continent))
+
+	circles.exit()
+	.remove()
 }
